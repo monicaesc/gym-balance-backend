@@ -17,11 +17,12 @@ class ApplicationController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     end
   end
+#esta funcion autentica el login de un usuario.
 
   def find_user
     @user = User.find(params[:user_id])
     rescue ActiveRecord::RecordNotFound
       render json: { errors: 'User not found' }, status: :not_found
   end
-
+#esta funcion ayuda a buscar un usuario.
 end

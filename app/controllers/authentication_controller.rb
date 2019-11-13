@@ -13,7 +13,7 @@ class AuthenticationController < ApplicationController
       render json: { error: 'unauthorized' }, status: :unauthorized
     end
   end
-
+#rails genera un token para poder autentificarse
   private
 
   def login_params
